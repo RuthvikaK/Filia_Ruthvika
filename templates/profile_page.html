@@ -1,0 +1,52 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+<div>
+  <div class="container-pp">
+    <div class="profile-pic-pp">
+      <!-- <img src="/static/profile-pics/{{user.profile_path}}" alt="Profile Picture" /> -->
+      <img src="{{ url_for('static', filename = user.profile_path) }}" alt="Profile Picture" />
+    </div>
+    <div class="profile-info-pp">
+
+      <div class="username-pp">{{user.username}}</div>
+      {% if is_user_page %}
+        <a href="/view_edit_profile" ><button type="submit" class="btn btn-primary custom-btn" id="submit-btn">Edit Profile</button></a>
+      {% else %}
+        {% if is_following %}
+          <a href="/profile_page/{{user_id}}/unfollow" ><button type="submit" class="btn btn-primary custom-btn" id="submit-btn">Unfollow</button></a>
+        {% else %}
+          <a href="/profile_page/{{user_id}}/follow" ><button type="submit" class="btn btn-primary custom-btn" id="submit-btn">Follow</button></a>
+        {% endif %}
+      {% endif %}
+      <div class="stats-pp">
+        <div>
+          <span>{{num_posts}}</span> posts
+
+        </div>
+        <div>
+          <span>{{num_followers}}</span> followers
+        </div>
+        <div>
+          <span>{{num_following}}</span> following
+        </div>
+      </div>
+      <div class="bio-pp">
+        <p>{{user['bio']}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="line-divider"></div>
+  <div class="gallery-container">
+    {% for post in profile_posts %}
+      <img src="{{post.photo_path}}" alt="Gallery Image" />
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+

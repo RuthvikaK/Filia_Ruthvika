@@ -1,0 +1,47 @@
+<!-- Jinja2 template -->
+{% extends '_layout.html' %} 
+{% block body %} 
+
+<div class="bg_color-search">
+    <header class="header-search">
+        <div class="heading-search"></div>
+        <form class="search-box-search" method="POST" action="{{ url_for('search') }}">
+            <input type="search" class="form-control-search" name="search_query" placeholder="Search"/>
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </header>
+
+    <div class="suggestions-search">
+        <h2>Posts</h2>
+        <ul class="ul-search">
+            {% for post in search_results.posts %}
+            <li class="suggestions-listItems-search">
+                <button type="submit" class="plus-icon-search"><i class="fa fa-plus"></i></button>
+                {{ post.caption }}
+            </li>
+            {% endfor %} 
+        </ul>
+        <h2>Users</h2>
+        <ul class="ul-search">
+            {% for user in search_results.users %}
+            <li class="suggestions-listItems-search">
+                <a href="{{url_for('profile_page', user_id=user.user_id)}}">
+                    <button type="submit" class="plus-icon-search"><i class="fa fa-plus"></i></button>
+                    {{ user.username }}
+                </a>
+            </li>
+            {% endfor %} 
+        </ul>
+        <h2>Communities</h2>
+        <ul class="ul-search">
+            {% for community in search_results.communities %}
+            <li class="suggestions-listItems-search">
+                <button type="submit" class="plus-icon-search"><i class="fa fa-plus"></i></button>
+                {{ community.name }}
+            </li>
+            {% endfor %} 
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

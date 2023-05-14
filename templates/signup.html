@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #BBD7FF;
+            border-bottom: 1px solid #ccc;
+        }
+
+        body {
+            background-color: #FFF6F6;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .spacing {
+            padding: 10px;
+        }
+
+        .custom-btn {
+            background-color: #BBD7FF;
+            color: black;
+            transition: background-color 0.3s ease;
+            margin-left: 700px;
+        }
+    </style>
+    <title>Sign-up</title>
+</head>
+<body>
+    <header id = "main-title"><h1>Sign-up</h1></header>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <div class="row mb-3 spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">First Name</label>
+            <div class="col-sm-10">
+                <input type="text" name="firstname" class="form-control" id="firstname" required>
+            </div>
+        </div>
+        <div class="row mb-3 spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">Last Name</label>
+            <div class="col-sm-10">
+                <input type="text" name="lastname" class="form-control" id="lastname" required>
+            </div>
+        </div>
+        <div class="row mb-3 spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" name="email" class="form-control" id="email" placeholder="must enter email ending with @uncc.edu " required>
+            </div>
+        </div>
+        <div class="form-group row spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-10">
+                <select class="form-select" aria-label="Default select example" name="gender" id="gender">
+                    <option selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="dns">Do not want to specify</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3 spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">Phone Number</label>
+            <div class="col-sm-10">
+                <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" required>
+            </div>
+        </div>
+        <div class="form-group row spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">Major</label>
+            <div class="col-sm-10">
+                <select class="form-select" aria-label="Default select example" name="major" id="major" required>
+                    <option selected>Select your Major</option>
+                    <option value="acc_bs">Accounting, B.S.</option>
+                    <option value="afs_ba">Africana Studies, B.A.</option>
+                    <option value="anth_ba">Anthropology, B.A.</option>
+                    <option value="arch_ba">Architecture, B.A.</option>
+                    <option value="arth_ba">Art History, B.A.</option>
+                    <option value="art_ba">Art, B.A.</option>
+                    <option value="art_bfa">Art, B.F.A.</option>
+                    <option value="bio_ba">Biology, B.A.</option>
+                    <option value="bio_bs">Biology, B.S.</option>
+                    <option value="busann_bsba">Business Analytics, B.S.B.A.</option>
+                    <option value="chem_ba">Chemistry, B.A.</option>
+                    <option value="chem_bs">Chemistry, B.S.</option>
+                    <option value="chfamd_ba">Child and Family Development, B.A.</option>
+                    <option value="civengt_bset">Civil Engineering Technology, B.S.E.T.</option>
+                    <option value="civeng_bsce">Civil Engineering, B.S.C.E.</option>
+                    <option value="commst_ba">Communication Studies, B.A.</option>
+                    <option value="compeng_bscpe">Computer Engineering, B.S.CP.E.</option>
+                    <option value="compsci_ba">Computer Science, B.A.</option>
+                    <option value="compsci_bs">Computer Science, B.S.</option>
+                    <option value="constman_bscm">Construction Management, B.S.C.M.</option>
+                    <option value="crimjus_ba">Criminal Justice, B.A.</option>
+                    <option value="dance_ba">Dance, B.A.</option>
+                    <option value="datasci_bs">Data Science, B.S.</option>
+                    <option value="earthenv_bs">Earth and Environmental Sciences, B.S.</option>
+                    <option value="econ_bs">Economics, B.S.</option>
+                    <option value="elecengt_bset">Electrical Engineering Technology, B.S.E.T.</option>
+                    <option value="eleceng_bsee">Electrical Engineering, B.S.E.E.</option>
+                    <option value="elemed_ba">Elementary Education, B.A.</option>
+                    <option value="eng_ba">English, B.A.</option>
+                    <option value="envstu_ba">Environmental Studies, B.A.</option>
+                    <option value="exersci_bs">Exercise Science, B.S.</option>
+                    <option value="finan_bsba">Finance, B.S.B.A.</option>
+                    <option value="fase_bset">Fire and Safety Engineering Technology, B.S.E.T.</option>
+                    <option value="fren_ba">French, B.A.</option>
+                    <option value="geog_ba">Geography, B.A.</option>
+                    <option value="geog_bs">Geography, B.S.</option>
+                    <option value="geol_bs">Geology, B.S.</option>
+                    <option value="germ_ba">German, B.A.</option>
+                    <option value="graphdes_bfa">Graphic Design, B.F.A.</option>
+                    <option value="healsysm_bs">Health Systems Management, B.S.</option>
+                    <option value="hist_ba">History, B.A.</option>
+                    <option value="intdis_ba">Interdisciplinary Studies, B.A.</option>
+                    <option value="intbus_bsba">International Business, B.S.B.A.</option>
+                    <option value="intstud_ba">International Studies, B.A.</option>
+                    <option value="japanst_ba">Japanese Studies, B.A.</option>
+                    <option value="lastu_ba">Latin American Studies, B.A.</option>
+                    <option value="mis_bsba">Management Information Systems, B.S.B.A.</option>
+                    <option value="man_bsba">Management, B.S.B.A.</option>
+                    <option value="mark_bsba">Marketing, B.S.B.A</option>
+                    <option value="mathbus_bs">Mathematics for Business, B.A.</option>
+                    <option value="mathbus_bs">Mathematics for Business, B.S.</option>
+                    <option value="math_ba">Mathematics, B.A.</option>
+                    <option value="math_bs">Mathematics, B.S.</option>
+                    <option value="mechengt_bset">Mechanical Engineering Technology, B.S.E.T.</option>
+                    <option value="mecheng_bsme">Mechanical Engineering, B.S.M.E.</option>
+                    <option value="meteo_bs">Meteorology, B.S.</option>
+                    <option value="midgred_ba">Middle Grades Education, B.A.</option>
+                    <option value="mus_ba">Music, B.A.</option>
+                    <option value="mus_bm">Music, B.M.</option>
+                    <option value="neurslesc_bs">Neurodiagnostics and Sleep Science, B.S.</option>
+                    <option value="nurs_bsn">Nursing, B.S.N.</option>
+                    <option value="nursrn_bsn">Nursing, RN-to-BSN, B.S.N.</option>
+                    <option value="oscm_bsba">Operations and Supply Chain Management, B.S.B.A.</option>
+                    <option value="phil_ba">Philosophy, B.A.</option>
+                    <option value="physcompeng_bs">Physics and Computer Engineering, B.S. Dual Degree</option>
+                    <option value="physeleceng_bs">Physics and Electrical Engineering, B.S. Dual Degree</option>
+                    <option value="physmecheng_bs">Physics and Mechanical Engineering, B.S. Dual Degree</option>
+                    <option value="phys_ba">Physics, B.A.</option>
+                    <option value="phys_bs">Physics, B.S.</option>
+                    <option value="polisci_ba">Political Science, B.A.</option>
+                    <option value="profst_bs">Professional Studies, B.S.</option>
+                    <option value="psych_bs">Psychology, B.S.</option>
+                    <option value="pubheal_bsph">Public Health, B.S.P.H.</option>
+                    <option value="relst_ba">Religious Studies, B.A.</option>
+                    <option value="respther_bsrt">Respiratory Therapy, B.S.R.T.</option>
+                    <option value="socwork_bsw">Social Work, B.S.W.</option>
+                    <option value="sociol_ba">Sociology, B.A.</option>
+                    <option value="span_ba">Spanish, B.A.</option>
+                    <option value="segcee_ba">Special Education General Curriculum and Elementary Education K-6, B.A. Dual Program</option>
+                    <option value="speced_ba">Special Education, B.A.</option>
+                    <option value="systeng_bsse">Systems Engineering, B.S.S.E.</option>
+                    <option value="thea_ba">Theater, B.A.</option>
+                    <option value="wrds_ba">Writing, Rhetoric, and Digital Studies, B.A. </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">Graduation Date</label>
+            <div class="col-sm-10">
+                <select class="form-select" aria-label="Default select example" name="gradDate" id="gradDate" required>
+                    <option selected>Select your graduation date</option>
+                    <option value="Fall 2023">Fall 2023</option>
+                    <option value="Spring 2024">Spring 2024</option>
+                    <option value="Fall 2024">Fall 2024</option>
+                    <option value="Spring 2025">Spring 2025</option>
+                    <option value="Fall 2025">Fall 2025</option>
+                    <option value="Spring 2026">Spring 2026</option>
+                    <option value="Fall 2026">Fall 2026</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row spacing">
+            <label for="bio" class="col-sm-2 col-form-label">Bio</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="bio"></textarea>
+            </div>
+        </div>
+        <div class="row mb-3 spacing">
+            <label for="profilePic" class="col-sm-2 col-form-label">Profile Picture</label>
+            <div class="col-sm-10">
+                <input type="file" name="profile_path" class="form-control" id="profile_path" required>
+            </div>
+        </div>
+        <div class="row mb-3 spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">Username</label>
+            <div class="col-sm-10">
+                <input type="text" name="username" class="form-control" id="username" required>
+            </div>
+        </div>
+        <div class="row mb-3 spacing">
+            <label for="inputName3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" name="password" class="form-control" id="password" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary custom-btn" id="submit-btn">signup</button>
+    </form>
+</body>
+</html>

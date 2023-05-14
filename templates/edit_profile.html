@@ -1,0 +1,179 @@
+{% extends '_layout.html' %}
+{% block body %}
+<body class="bg_color-editProfile"> 
+    <header class="header-editProfile">
+      <h1 class="heading-editProfile">Edit Profile</h1>
+    </header>
+    <form action="/edit_profile" method="post" enctype="multipart/form-data">
+      <div class="form-group row spacing-editProfile">
+          <label for="firstname" class="col-sm-2 col-form-label">First Name</label>
+          <div class="col-sm-10">
+            <input class="form-control" value="{{user.firstname}}" name="firstname" placeholder="First Name">
+          </div> 
+        </div>
+        <div class="form-group row spacing-editProfile">
+          <label for="lastname" class="col-sm-2 col-form-label">Last Name</label>
+          <div class="col-sm-10">
+            <input class="form-control" value="{{user.lastname}}" name="lastname" placeholder="Last Name">
+          </div>
+        </div>
+      
+        <div class="form-group row spacing-editProfile">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input class="form-control" value="{{user.email}}" name="email" placeholder="Email">
+          </div>
+        </div>
+
+        <div class="form-group row spacing-editProfile">
+          <label for="phoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+          <div class="col-sm-10">
+            <input class="form-control" value="{{user.phone}}" name="phone" placeholder="Phone Number">
+          </div>
+        </div>
+
+        <div class="form-group row spacing-editProfile">
+          <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+          <div class="col-sm-10">
+              <select class="form-select" aria-label="Default select example" name="gender">
+                  <!-- <option selected >Select your gender</option> -->
+                  <option value="male"{% if user.gender == "male" %} selected="selected" {% endif %}>Male</option>
+                  <option value="female"{% if user.gender == "female" %} selected="selected" {% endif %}>Female</option>
+                  <option value="dns"{% if user.gender == "dns" %} selected="selected" {% endif %}>Do not want to specify</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="form-group row spacing-editProfile">
+          <label for="major" class="col-sm-2 col-form-label">Major</label>
+          <div class="col-sm-10">
+            <select class="form-select" aria-label="Default select example" name="major">
+              <!-- <option selected>Select your Major</option> -->
+              <option value="acc_bs"{% if user.major == "acc_bs" %} selected="selected" {% endif %}>Accounting, B.S.</option>
+              <option value="afs_ba"{% if user.major == "afs_ba" %} selected="selected" {% endif %}>Africana Studies, B.A.</option>
+              <option value="anth_ba"{% if user.major == "anth_ba" %} selected="selected" {% endif %}>Anthropology, B.A.</option>
+              <option value="arch_ba"{% if user.major == "arch_ba" %} selected="selected" {% endif %}>Architecture, B.A.</option>
+              <option value="arth_ba"{% if user.major == "arth_ba" %} selected="selected" {% endif %}>Art History, B.A.</option>
+              <option value="art_ba"{% if user.major == "art_ba" %} selected="selected" {% endif %}>Art, B.A.</option>
+              <option value="art_bfa"{% if user.major == "art_bfa" %} selected="selected" {% endif %}>Art, B.F.A.</option>
+              <option value="bio_ba"{% if user.major == "bio_ba" %} selected="selected" {% endif %}>Biology, B.A.</option>
+              <option value="bio_bs"{% if user.major == "bio_bs" %} selected="selected" {% endif %}>Biology, B.S.</option>
+              <option value="busann_bsba"{% if user.major == "busann_bsba" %} selected="selected" {% endif %}>Business Analytics, B.S.B.A.</option>
+              <option value="chem_ba"{% if user.major == "chem_ba" %} selected="selected" {% endif %}>Chemistry, B.A.</option>
+              <option value="chem_bs"{% if user.major == "chem_bs" %} selected="selected" {% endif %}>Chemistry, B.S.</option>
+              <option value="chfamd_ba"{% if user.major == "chfamd_ba" %} selected="selected" {% endif %}>Child and Family Development, B.A.</option>
+              <option value="civengt_bset"{% if user.major == "civengt_bset" %} selected="selected" {% endif %}>Civil Engineering Technology, B.S.E.T.</option>
+              <option value="civeng_bsce"{% if user.major == "civeng_bsce" %} selected="selected" {% endif %}>Civil Engineering, B.S.C.E.</option>
+              <option value="commst_ba"{% if user.major == "commst_ba" %} selected="selected" {% endif %}>Communication Studies, B.A.</option>
+              <option value="compeng_bscpe"{% if user.major == "compeng_bscpe" %} selected="selected" {% endif %}>Computer Engineering, B.S.CP.E.</option>
+              <option value="compsci_ba"{% if user.major == "compsci_ba" %} selected="selected" {% endif %}>Computer Science, B.A.</option>
+              <option value="compsci_bs"{% if user.major == "compsci_bs" %} selected="selected" {% endif %}>Computer Science, B.S.</option>
+              <option value="constman_bscm"{% if user.major == "constman_bscm" %} selected="selected" {% endif %}>Construction Management, B.S.C.M.</option>
+              <option value="crimjus_ba"{% if user.major == "crimjus_ba" %} selected="selected" {% endif %}>Criminal Justice, B.A.</option>
+              <option value="dance_ba"{% if user.major == "dance_ba" %} selected="selected" {% endif %}>Dance, B.A.</option>
+              <option value="datasci_bs"{% if user.major == "datasci_bs" %} selected="selected" {% endif %}>Data Science, B.S.</option>
+              <option value="earthenv_bs"{% if user.major == "earthenv_bs" %} selected="selected" {% endif %}>Earth and Environmental Sciences, B.S.</option>
+              <option value="econ_bs"{% if user.major == "econ_bs" %} selected="selected" {% endif %}>Economics, B.S.</option>
+              <option value="elecengt_bset"{% if user.major == "elecengt_bset" %} selected="selected" {% endif %}>Electrical Engineering Technology, B.S.E.T.</option>
+              <option value="eleceng_bsee"{% if user.major == "eleceng_bsee" %} selected="selected" {% endif %}>Electrical Engineering, B.S.E.E.</option>
+              <option value="elemed_ba"{% if user.major == "elemed_ba" %} selected="selected" {% endif %}>Elementary Education, B.A.</option>
+              <option value="eng_ba"{% if user.major == "eng_ba" %} selected="selected" {% endif %}>English, B.A.</option>
+              <option value="envstu_ba"{% if user.major == "envstu_ba" %} selected="selected" {% endif %}>Environmental Studies, B.A.</option>
+              <option value="exersci_bs"{% if user.major == "exersci_bs" %} selected="selected" {% endif %}>Exercise Science, B.S.</option>
+              <option value="finan_bsba"{% if user.major == "finan_bsba" %} selected="selected" {% endif %}>Finance, B.S.B.A.</option>
+              <option value="fase_bset"{% if user.major == "fase_bset" %} selected="selected" {% endif %}>Fire and Safety Engineering Technology, B.S.E.T.</option>
+              <option value="fren_ba"{% if user.major == "fren_ba" %} selected="selected" {% endif %}>French, B.A.</option>
+              <option value="geog_ba"{% if user.major == "geog_ba" %} selected="selected" {% endif %}>Geography, B.A.</option>
+              <option value="geog_bs"{% if user.major == "geog_bs" %} selected="selected" {% endif %}>Geography, B.S.</option>
+              <option value="geol_bs"{% if user.major == "geol_bs" %} selected="selected" {% endif %}>Geology, B.S.</option>
+              <option value="germ_ba"{% if user.major == "germ_ba" %} selected="selected" {% endif %}>German, B.A.</option>
+              <option value="graphdes_bfa"{% if user.major == "graphdes_bfa" %} selected="selected" {% endif %}>Graphic Design, B.F.A.</option>
+              <option value="healsysm_bs"{% if user.major == "healsysm_bs" %} selected="selected" {% endif %}>Health Systems Management, B.S.</option>
+              <option value="hist_ba"{% if user.major == "hist_ba" %} selected="selected" {% endif %}>History, B.A.</option>
+              <option value="intdis_ba"{% if user.major == "intdis_ba" %} selected="selected" {% endif %}>Interdisciplinary Studies, B.A.</option>
+              <option value="intbus_bsba"{% if user.major == "intbus_bsba" %} selected="selected" {% endif %}>International Business, B.S.B.A.</option>
+              <option value="intstud_ba"{% if user.major == "intstud_ba" %} selected="selected" {% endif %}>International Studies, B.A.</option>
+              <option value="japanst_ba"{% if user.major == "japanst_ba" %} selected="selected" {% endif %}>Japanese Studies, B.A.</option>
+              <option value="lastu_ba"{% if user.major == "lastu_ba" %} selected="selected" {% endif %}>Latin American Studies, B.A.</option>
+              <option value="mis_bsba"{% if user.major == "mis_bsba" %} selected="selected" {% endif %}>Management Information Systems, B.S.B.A.</option>
+              <option value="man_bsba"{% if user.major == "man_bsba" %} selected="selected" {% endif %}>Management, B.S.B.A.</option>
+              <option value="mark_bsba"{% if user.major == "mark_bsba" %} selected="selected" {% endif %}>Marketing, B.S.B.A</option>
+              <option value="mathbus_ba"{% if user.major == "mathbus_ba" %} selected="selected" {% endif %}>Mathematics for Business, B.A.</option>
+              <option value="mathbus_bs"{% if user.major == "mathbus_bs" %} selected="selected" {% endif %}>Mathematics for Business, B.S.</option>
+              <option value="math_ba"{% if user.major == "math_ba" %} selected="selected" {% endif %}>Mathematics, B.A.</option>
+              <option value="math_bs"{% if user.major == "math_bs" %} selected="selected" {% endif %}>Mathematics, B.S.</option>
+              <option value="mechengt_bset"{% if user.major == "mechengt_bset" %} selected="selected" {% endif %}>Mechanical Engineering Technology, B.S.E.T.</option>
+              <option value="mecheng_bsme"{% if user.major == "mecheng_bsme" %} selected="selected" {% endif %}>Mechanical Engineering, B.S.M.E.</option>
+              <option value="meteo_bs"{% if user.major == "meteo_bs" %} selected="selected" {% endif %}>Meteorology, B.S.</option>
+              <option value="midgred_ba"{% if user.major == "midgred_ba" %} selected="selected" {% endif %}>Middle Grades Education, B.A.</option>
+              <option value="mus_ba"{% if user.major == "mus_ba" %} selected="selected" {% endif %}>Music, B.A.</option>
+              <option value="mus_bm"{% if user.major == "mus_bm" %} selected="selected" {% endif %}>Music, B.M.</option>
+              <option value="neurslesc_bs"{% if user.major == "neurslesc_bs" %} selected="selected" {% endif %}>Neurodiagnostics and Sleep Science, B.S.</option>
+              <option value="nurs_bsn"{% if user.major == "nurs_bsn" %} selected="selected" {% endif %}>Nursing, B.S.N.</option>
+              <option value="nursrn_bsn"{% if user.major == "nursrn_bsn" %} selected="selected" {% endif %}>Nursing, RN-to-BSN, B.S.N.</option>
+              <option value="oscm_bsba"{% if user.major == "oscm_bsba" %} selected="selected" {% endif %}>Operations and Supply Chain Management, B.S.B.A.</option>
+              <option value="phil_ba"{% if user.major == "phil_ba" %} selected="selected" {% endif %}>Philosophy, B.A.</option>
+              <option value="physcompeng_bs"{% if user.major == "physcompeng_bs" %} selected="selected" {% endif %}>Physics and Computer Engineering, B.S. Dual Degree</option>
+              <option value="physeleceng_bs"{% if user.major == "physeleceng_bs" %} selected="selected" {% endif %}>Physics and Electrical Engineering, B.S. Dual Degree</option>
+              <option value="physmecheng_bs"{% if user.major == "physmecheng_bs" %} selected="selected" {% endif %}>Physics and Mechanical Engineering, B.S. Dual Degree</option>
+              <option value="phys_ba"{% if user.major == "phys_ba" %} selected="selected" {% endif %}>Physics, B.A.</option>
+              <option value="phys_bs"{% if user.major == "phys_bs" %} selected="selected" {% endif %}>Physics, B.S.</option>
+              <option value="polisci_ba"{% if user.major == "polisci_ba" %} selected="selected" {% endif %}>Political Science, B.A.</option>
+              <option value="profst_bs"{% if user.major == "profst_bs" %} selected="selected" {% endif %}>Professional Studies, B.S.</option>
+              <option value="psych_bs"{% if user.major == "psych_bs" %} selected="selected" {% endif %}>Psychology, B.S.</option>
+              <option value="pubheal_bsph"{% if user.major == "pubheal_bsph" %} selected="selected" {% endif %}>Public Health, B.S.P.H.</option>
+              <option value="relst_ba"{% if user.major == "relst_ba" %} selected="selected" {% endif %}>Religious Studies, B.A.</option>
+              <option value="respther_bsrt"{% if user.major == "respther_bsrt" %} selected="selected" {% endif %}>Respiratory Therapy, B.S.R.T.</option>
+              <option value="socwork_bsw"{% if user.major == "socwork_bsw" %} selected="selected" {% endif %}>Social Work, B.S.W.</option>
+              <option value="sociol_ba"{% if user.major == "sociol_ba" %} selected="selected" {% endif %}>Sociology, B.A.</option>
+              <option value="span_ba"{% if user.major == "span_ba" %} selected="selected" {% endif %}>Spanish, B.A.</option>
+              <option value="segcee_ba"{% if user.major == "segcee_ba" %} selected="selected" {% endif %}>Special Education General Curriculum and Elementary Education K-6, B.A. Dual Program</option>
+              <option value="speced_ba"{% if user.major == "speced_ba" %} selected="selected" {% endif %}>Special Education, B.A.</option>
+              <option value="systeng_bsse"{% if user.major == "systeng_bsse" %} selected="selected" {% endif %}>Systems Engineering, B.S.S.E.</option>
+              <option value="thea_ba"{% if user.major == "thea_ba" %} selected="selected" {% endif %}>Theater, B.A.</option>
+              <option value="wrds_ba"{% if user.major == "wrds_ba" %} selected="selected" {% endif %}>Writing, Rhetoric, and Digital Studies, B.A.</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row spacing-editProfile">
+          <label for="graduationDate" class="col-sm-2 col-form-label">Graduation Date</label>
+          <div class="col-sm-10">
+              <select class="form-select" aria-label="Default select example" name="grad_date">
+                  <!-- <option selected>Select your graduation date</option> -->
+                  <option value="fall23"{% if user.grad_date == "fall23" %} selected="selected" {% endif %}>Fall 2023</option>
+                  <option value="spring24"{% if user.grad_date == "spring234" %} selected="selected" {% endif %}>Spring 2024</option>
+                  <option value="fall24"{% if user.grad_date == "fall24" %} selected="selected" {% endif %}>Fall 2024</option>
+                  <option value="spring25"{% if user.grad_date == "spring25" %} selected="selected" {% endif %}>Spring 2025</option>
+                  <option value="fall25"{% if user.grad_date == "fall25" %} selected="selected" {% endif %}>Fall 2025</option>
+                  <option value="spring26"{% if user.grad_date == "spring26" %} selected="selected" {% endif %}>Spring 2026</option>
+                  <option value="fall26"{% if user.grad_date == "fall26" %} selected="selected" {% endif %}>Fall 2026</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="form-group row spacing-editProfile">
+          <label for="username" class="col-sm-2 col-form-label">Username</label>
+          <div class="col-sm-10">
+            <input class="form-control" value="{{user.username}}" name="username" placeholder="Username">
+          </div>
+        </div>
+
+        <div class="form-group row spacing-editProfile">
+          <label for="bio" class="col-sm-2 col-form-label">Bio</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="exampleFormControlTextarea1" value="{{user.bio}}" rows="3" name="bio" placeholder="Bio"></textarea>
+          </div>
+        </div>
+            <div class="form-group row btn-wrapper d-flex justify-content-center text-center">
+              <div class="col-sm-10">
+                  <a href="/editprofpic" class="btn btn-primary custom-btn" id="submit-btn">Edit Profile Pic</a>
+                  <a href="/reset_password_page" class="btn btn-primary custom-btn" id="submit-btn">Reset Password</a>
+                  <button type="submit" class="btn btn-primary custom-btn" id="submit-btn">Save Changes</button>
+                  <!-- <a href="/view_edit_profile" type="submit" class="btn btn-primary custom-btn" id="submit-btn">Save Changes</a> -->
+              </div>
+          </div>
+          </div>
+      </div>
+    </form>
+</body>
+{% endblock %}

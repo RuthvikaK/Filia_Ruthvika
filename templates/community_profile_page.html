@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View-Community Profile Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body-community-profile-page {
+            font-family: Arial, sans-serif;
+            background-color: #FFF6F6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .profile-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            display: inline-block;
+        }
+
+        .name {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .join-btn {
+            background-color: #BBD7FF;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .join-btn:hover {
+            background-color: #7AA2FF;
+        }
+
+        .stats {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .stats span {
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .stats span strong {
+            display: block;
+        }
+
+        .bio {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .line-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #dbdbdb;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head> -->
+
+{% extends '_layout.html' %} 
+{% block body %} 
+
+<div class="body-community-profile-page">
+    <div class="container">
+        <div class="profile-container">
+            <img src="/static/profilepic.png" alt="Profile Picture" class="profile-picture">
+            <span class="name">Data Science Community</span>
+            <button class="join-btn">Join</button>
+            <div class="stats">
+                <span><strong>Posts</strong>2</span>
+                <span><strong>Followers</strong>160</span>
+                <span><strong>Following</strong>248</span>
+            </div>
+            <div class="bio">
+                <p>Join our Slack community below!<br>
+                    www.slack.com/datascience<br>
+                    Please only post data science related information!</p>
+            </div>
+            <div class="line-divider"></div>
+            <!-- Add user's photos grid here -->
+        </div>
+        
+    </div>
+    <div class="gallery-container">
+        <img src="/static/profileGrid1.png" alt="Gallery Image" />
+        <img src="/static/profileGrid2.png" alt="Gallery Image" />
+        <img src="/static/profileGrid3.png" alt="Gallery Image" />
+        <img src="/static/profileGrid4.png" alt="Gallery Image" />
+        <img src="/static/profileGrid5.png" alt="Gallery Image" />
+        <img src="/static/profileGrid6.png" alt="Gallery Image" />
+      </div>
+</div>
+
+{% endblock %}

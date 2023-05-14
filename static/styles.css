@@ -1,0 +1,805 @@
+/* navbar */
+
+.Fixed
+{
+    position: fixed;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+body {
+    background-color: #FFF6F6;
+    display: grid;
+    grid-template-columns: auto 10fr;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logout-icon-color{
+    background-color: #FFF6F6;
+}
+
+.btn {
+    background-color: #BBD7FF;
+    color: black;
+    margin: 25px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.navbar-custom {
+    background-color: #BBD7FF;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.text-color {
+    color: black;
+}
+
+.img-responsive {
+    height: auto;
+    width: auto;
+    max-height: 180px;
+    max-width: 180px;
+}
+
+.navbar-fontSize{
+    font-size: 24px;
+}
+
+.row {
+    --bs-gutter-x: 2.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+/* comment page */
+
+body-comment-page {
+    background-color: #FFF6F6;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment-box {
+    background-color: white;
+    border-radius: 20px;
+    padding: 60px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.photo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.comment-actions {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.reply-like {
+    display: flex;
+}
+
+.reply-like span {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+/* community profile page*/
+body-community-profile-page {
+    font-family: Arial, sans-serif;
+    background-color: #FFF6F6;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.name {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.join-btn {
+    background-color: #BBD7FF;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #7AA2FF;
+}
+
+.stats {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.stats span {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.stats span strong {
+    display: block;
+}
+
+.bio {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.line-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #dbdbdb;
+    margin-bottom: 30px;
+}
+
+/* edit_profile */
+
+.bg_color-editProfile{
+    background-color: #FFF6F6;
+}
+
+.header-editProfile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #BBD7FF;
+    border-bottom: 1px solid #ccc;
+}
+
+.heading-editProfile {
+    margin: auto;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.spacing-editProfile {
+    padding: 5px;
+}
+
+.btn-wrapper-editProfile {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-editProfile {
+    background-color: #BBD7FF;
+    color: black;
+    margin: 25px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+
+/* editprofpic */
+.bg_color-epp{
+    background-color: #FFF6F6;
+}
+
+.header-epp {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px;
+background-color: #BBD7FF;
+border-bottom: 1px solid #ccc;
+}
+
+.heading-epp {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.btn-wrapper-epp {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 60px
+}
+
+.btn-epp {
+    background-color: #BBD7FF;
+    color: black;
+    padding: 10px;
+    font-size: 25px;
+    margin: 1rem;
+}
+
+.profile-pic-epp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-epp {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+/* home_page */
+.body-hp {
+    font-family: Arial, sans-serif;
+    background-color: #FFF6F6;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    margin-left: 200px; 
+}
+
+.profile-pic-hp {
+    display: grid;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+.header-hp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #BBD7FF;
+    border-bottom: 1px solid #ccc;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.main-hp {
+    margin: 45px auto;
+    max-width: 800px;
+}
+
+.group-header-hp {
+    margin: auto;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.post-hp {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: auto;
+ 
+}
+
+.post-header-hp {
+    display: flex;
+    align-items: center;
+}
+
+.post-header-hp img {
+    border-radius: 50%;
+    height: 50px;
+    margin: 10px;
+}
+
+.post-header-hp h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.post-content-hp {
+    display: flex;
+    flex-direction: column; /* add this to change the flex direction to column */
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    min-width: 800px;
+    max-height: fit-content;
+}
+
+.post-content-hp img {
+    min-width: 500px;
+    min-height: 500px;
+    max-width: fit-content;
+    object-fit: contain;
+    margin-bottom: 10px; /* add this to create a margin between the image and the paragraph */
+}
+
+.post-content-hp p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.post-footer-hp {
+    display: flex;
+    margin-left: 150px;
+    margin-bottom: 10px;
+}
+
+    
+/* for "..." */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 600px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a, .dropdown-option {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    border: none;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-hp {
+    background-color: white;
+    border: none; /* Remove borders */
+    color: black; /* White text */
+    padding: 10px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+/* Size of the post */
+.post-image {
+    width: 500px; 
+    height: 500px; 
+    object-fit: cover !important; 
+}  
+
+/* profile_page */
+
+  .container-pp {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    padding: 30px 0px;
+  }
+
+  .profile-pic-pp {
+    display: grid;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin-left: 200px;
+    overflow: hidden;
+  }
+
+  .profile-pic-pp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .profile-info-pp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Add third column */
+    align-items: center;
+    /* Center items vertically */
+  }
+
+  .username-pp {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-right: 10px;
+    /* Add right margin */
+  }
+
+  .btn-pp {
+    margin-left: 10px;
+    /* Add left margin */
+    background-color: #BBD7FF;
+    color: black;
+    margin: 25px;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 50px;
+    border-color: transparent;
+  }
+
+  .stats-pp {
+    display: grid;
+    margin-bottom: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .stats-pp div {
+    margin-right: 20px;
+  }
+
+  .stats-pp div:last-child {
+    margin-right: 0;
+  }
+
+  .stats-pp span {
+    font-weight: 600;
+  }
+
+  .bio-pp {
+    margin: 10px;
+    display: grid;
+    margin-bottom: 10px;
+    grid-row: 3;
+    font-size: 20px;
+  }
+
+  .bio-pp p {
+    margin-bottom: 5px;
+  }
+
+  .gallery-pp {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 20px;
+  }
+
+  .gallery-container {
+    margin-top: 20px;
+    margin-left: 250px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+  }
+
+  .gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .gallery-container img:hover {
+    opacity: 0.8;
+  }
+
+  /* Password Reset Successful Page */
+.reset-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .reset-success-content {
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background-color: #BBD7FF; 
+    border: none;
+    color: black;
+    padding: 8px 16px;
+    font-size: 25px;
+    /* transition: background-color 0.3s ease, border-color 0.3s ease; */
+  }
+  
+  .btn-primary:hover {
+    background-color: #8FB8DE;
+    color: black;
+  }
+
+/* reset_password */
+.body-reset {
+    background-color: #FFF6F6;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .box-reset {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 700px;
+    height: 450px;
+    margin: auto;
+    text-align: center;
+    font-display: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Add flexbox display */
+    flex-direction: column; /* Set the direction of the flexbox layout */
+    justify-content: space-evenly; /* Space out the elements evenly */
+  }  
+  
+  .h1-reset {
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(30, 28, 28);
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .required-reset {
+    color: red;
+  }
+  
+  .form-group-reset {
+    text-align: left;
+    margin-bottom: 20px; /* Add space between form groups */
+    display: grid;
+  }
+  
+  .form-control-reset {
+    margin-bottom: 5px; /* Add space between input and label */
+  }
+  
+  .custom-btn-reset {
+    background-color: #BBD7FF;
+    color: black;
+    transition: background-color 0.3s ease;
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor */
+    margin-top: 10px; /* Move button down a little */
+    padding: 12px 24px; /* Increase button padding */
+    font-size: 20px; /* Increase font size */
+    border-radius: 5px; /* Adjust border radius */
+  }  
+  
+  .custom-btn-reset:hover {
+    background-color: #8FB8DE;
+    color: black;
+  }  
+
+
+/* search */
+
+.bg_color-search{
+    background-color: #FFF6F6;
+}
+
+.header-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #BBD7FF;
+    border-bottom: 1px solid #ccc;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+.heading-search {
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.search-box-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 800px;
+    margin-right: 500px;
+}
+
+.search-box-search input[type="search"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.search-box-search button[type="submit"] {
+    background-color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 40px;
+    margin-left: 10px;
+}
+
+.search-box-search button[type="submit"] i {
+    font-size: 25px;
+    color: #777;
+}
+
+.suggestions-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 80px;
+    min-width: 400px;
+    margin-right: 500px;
+    margin-left: 500px;
+}
+
+.suggestions-listItems-search {
+    display: flex;
+    flex: 1;
+    padding: 25px;
+    border: none;
+    border-radius: 40px;
+    background-color: #FFFFFF;
+    font-size: 17px;
+    padding-right: 50px;
+    padding-left: 250px;
+    list-style: none;
+    max-width: 1000px;
+    margin-right: 500px;
+    margin-left: 280px;
+    margin-top: 30px;
+}
+
+.plus-icon-search {
+    display: inline-block;
+    margin-left: 0px;
+    background-color: #BBD7FF;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    text-align: center;
+    line-height: 20px;
+    border: none;
+    margin-right: 20px ;
+}
+
+.plus-icon-search i {
+    color: white;
+
+}
+
+.ul-search {
+    list-style: none;
+}
+
+/* create post */
+
+#preview {
+    max-width: 200px;
+    max-height: 200px;
+}
+body-post {
+    background-color: #FFF6F6;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 10;
+    padding: 0;
+}
+
+.box-post {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 800px;
+    height: 650px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-display: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.h1-post {
+    font-size: 28px;
+    font-weight: semi Bold;
+    color: rgb(13, 13, 13);
+    margin-top: 5px;
+}
+
+.sample-photo-post {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.caption-label-post {
+    background-color: #BBD7FF;
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.custom-button {
+    background-color: #BBD7FF;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.custom-button:hover {
+    background-color: #8FB8DE;
+    color: black;
+}
+
+

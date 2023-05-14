@@ -1,0 +1,42 @@
+{% extends '_layout.html' %} 
+{% block body %} 
+
+<div class="bg_color-epp">
+    <header class="header-epp">
+		<div class="heading-epp">Edit Profile Picture</div>
+	</header>
+    <div class="profile-pic-epp">
+        <img src="/static/profile-pics/{{user['profile_path']}}" alt="Profile Picture" />
+    </div>
+    <div class="btn-wrapper-epp">
+    <!-- <button type="button" class="btn-epp btn-primary btn-lg">Remove Photo</button> -->
+
+        <!-- <form action="/deleteprofpic/{{photo}}" method="POST">
+            <div class="profile-pic-epp">
+                <img src="/static/profile-pics/home_profile.png" width=200px, height=200px, alt="Profile Picture" />
+            </div> -->
+
+        <form action="/deleteprofpic" method="POST">
+
+            <button type="submit" class="btn btn-primary" id="submit-btn">Remove Photo</button>
+            {% if delete %}
+                <div class="profile-pic-epp">
+                    <img src="/static/profile-pics/home_profile.png", width=200px, height=200px, alt="Profile Picture" />
+                </div>
+            {% endif %}
+        </form>
+        <form action="uploadprofpic" method="POST">
+            <div class="d-flex justify-content-center">
+                <div class="btn btn-primary btn-rounded">
+                    <label class="form-label text-white m-1" for="customFile2">Upload Picture From Computer</label>
+                    <input type="file" class="form-control d-none" id="customFile2" />
+                </div>
+                {% if upload %}
+                    <img src="/static/profile-pics/{{user.profile_path}}" alt="Profile Picture"/>
+                {% endif %}
+            </div>
+        </form>
+    <!-- <button type="button" class="btn-epp btn-primary btn-lg">Upload pic from Computer</button> -->
+    </div>
+</div>
+{% endblock %}

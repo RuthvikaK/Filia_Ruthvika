@@ -1,0 +1,27 @@
+
+{% extends '_layout.html' %} 
+{% block body %}
+<div class="bg_color-search">
+    <header class="header-search">
+        <div class="heading-search"></div>
+        <form class="search-box-search" method="POST" action="{{ url_for('search') }}">
+            <input type="search" class="form-control-search" name="search_query" placeholder="Search"/>
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </header>
+    
+    <div class="suggestions">
+        <ul>
+            <li class="suggestions-listItems-search">
+                <button type="submit" class="plus-icon-search"><i class="fa fa-plus"></i></button> Computer Science
+            </li> 
+            <li class="suggestions-listItems-search">
+                <button type="submit" class="plus-icon-search"><i class="fa fa-plus"></i></button> Accounting 
+            </li>
+            <li class="suggestions-listItems-search">
+                <button type="submit" class="plus-icon-search"><i class="fa fa-plus"></i></button> Data Science
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,129 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+    <style>
+    body {
+      background-color: #BBD7FF;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      padding: 10px 20px;
+      background-color: #BBD7FF;
+    }
+
+    .navbar a {
+      color: #BBD7FF;
+    }
+
+    .navbar .btn {
+      background-color: white;
+      color: #5fa4ed;
+      border-radius: 6px;
+      margin-left: 40px;
+      font-size: 24px;
+      padding: 12px 24px;
+    }
+
+    .welcome-text {
+      font-size: 150px;
+      font-weight: bold;
+      text-align: left;
+      position: absolute;
+      top: 0;
+      left: 20px;
+    }
+
+    p{
+      font-family: 'Playfair Display', serif;
+    }
+    .logo {
+      display: block;
+      margin-left: 350px;
+      margin-top: 40px;
+      width: 560px;
+      height: auto;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 20px;
+      justify-items: center;
+      align-items: center;
+      height: calc(100vh - 60px);
+      margin: 0;
+      padding: 0;
+    }
+
+    .info-box {
+      background-color: #FBE5F3;
+      border-radius: 4px;
+      padding: 40px;
+      width:400px;
+      text-align: left;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 400px;
+      right: 30px;
+    }       
+
+    .info-box p {
+      color: black;
+      font-size: 25px;
+      text-align: center;
+    }
+
+    .image1 {
+      width: 500px;
+      height: auto;
+      position: absolute;
+      top: 150px;
+      right: 0px;
+    }
+
+    .image2 {
+      width: 600px;
+      height: auto;
+      position: absolute;
+      bottom: -1px;
+      left: 0px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-outline-primary" href="/signup">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary" href="/login">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content">
+    <p class="welcome-text">Welcome to</p>
+    <img src="/static/FiliaLogo.jpeg" alt="Logo" class="logo" />
+    <img src="/static/Image1.png" alt="Image 1" class="image1" />
+    <div class="info-box">
+        <p>Find friends and form communities based on your major and interests at UNCC!</p>
+      </div>
+      <img src="/static/Image2.png" alt="Image 2" class="image2" />
+    </div>
+  </body>
+  </html>
+   

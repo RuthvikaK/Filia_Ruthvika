@@ -1,0 +1,63 @@
+{% extends '_layout.html' %}
+{% block body %}
+
+
+<div class="body-hp">
+    <header class="header-hp">
+        <div class="group-header-hp">{{ user.major }}</div>
+        <div class="nav-icons-hp profile-pic-hp">
+            <a href="#">
+                <img src="{{url_for('static', filename=user.profile_path)}}" width="50" height="50">
+            </a>
+        </div>
+    </header>
+    <main class="main-hp">
+        {% for post in posts %}
+        <section class="post-hp">
+            <div class="post-header-hp">
+                <img src="/static/{{user.photo_path}}" alt="Profile Picture">
+                <h2>{{ user.username }}</h2>
+                <!-- Add the dropdown menu here -->
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <!-- Add the delete option here -->
+                        <form method="POST" action="/delete_photo_post/{{post.id}}" style="display:inline;">
+                            <button type="submit" class="dropdown-option">
+                                <i class="fa fa-trash" aria-hidden="true"></i> Delete Post
+                            </button>
+                        </form>
+                        <!-- Add the edit option here -->
+                        <a href="create_photo_post/{{post.id}}/edit" class="dropdown-option">
+                            <i class="fa fa-edit" aria-hidden="true"></i> Edit Post
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-content-hp">
+                <img src="/static/{{post.photo_path}}" alt="Post Image" class="post-image">
+
+<!--                 <h2>{{ post.user.username }}</h2>
+            </div>
+            <div class="post-content-hp">
+                <img src="{{ post.photo_path }}" alt="Post Image" class="post-image"> -->
+
+                <p>{{ post.caption }}</p>
+            </div>
+            <div class="post-footer-hp">
+                <button class="btn-hp">
+                    <i class="fa fa-thumbs-up fa-xl" aria-hidden="true"></i>
+                </button>
+
+                <a href="{{ url_for('comment_page', post_id=post.id) }}" class="btn-hp">
+                    <i class="fa-solid fa-comment fa-xl"></i>
+                </a>
+            </div>
+        </section>
+        {% endfor %}
+    </main>
+</div>
+ 
+{% endblock %}
